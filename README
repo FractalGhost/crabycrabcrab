@@ -2,6 +2,8 @@ Purpose: this program draws a crab and a captain with a background.
 
 crabs
 
+crabs.mn sets the X, Y, Theta, and size
+
 ============
 
 drawCapt
