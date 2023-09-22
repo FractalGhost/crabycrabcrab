@@ -1,3 +1,5 @@
+%Commitment
+
 function crabs ()
 % Crabs is a kids computer game where a fisherman, called the captain,
 % hunts for a very clever and powerful crab.
