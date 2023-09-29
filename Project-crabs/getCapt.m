@@ -1,4 +1,5 @@
 function capt = getCapt (captSize)
+
 % The function getCapt computes and returns the captain centered at the origin with the head of the
 %captain is on the positive x-axis indication a heading angle of zero. The captain is returned in the form of
 %a matrix with each column representing one point on the captain. The parameter captSize is used as a
