@@ -12,7 +12,7 @@ thetaCapt = -pi/2;
 sizeCapt = 50;
 % Draw the captain and initialize graphics handles
 %*********************************************************
-drawCapt(xCapt , yCapt, thetaCapt, sizeCapt)
+captainGraphics=drawCapt(xCapt , yCapt, thetaCapt, sizeCapt)
 % Put your call to drawCapt() here ..... You must give drawCapt its
 % input and output arguments.
 %*******************************************************
