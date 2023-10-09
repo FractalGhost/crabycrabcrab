@@ -8,26 +8,43 @@ crabs.mn sets the X, Y, Theta, and size
 
 drawCapt
 
+draws the captain using the points of getCapt (added with the getrotation and getTranslation)
+
 ============
 
 getCapt
+
+sets the points of the captain
 
 ============
 
 drawMap
 
+display's a image with the given width an height as the background
+
 ============
 
 drawLine
+
+draws the captain using line to connect points from getCapt (added with the getrotation and getTranslation)
+
 
 ============
 
 getTranslation
 
+changes the x and y cordinates of get capt
+
 ============
 
 getRotation
 
+rotates the x and y cordinates of get capt
+
 ===========
 
 moveCapt
+
+allows the capt to move
+
+==================
