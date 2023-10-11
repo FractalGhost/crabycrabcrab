@@ -1,19 +1,23 @@
 function [ xCapt, yCapt, thetaCapt ] = moveCapt( cmd, x, y, theta );
 dTheta = pi/6;
-dStep = 50;
-if( cmd == "w" ) %move forward
-xCapt = x;
-yCapt = y;
+dStep = 40;
+
+if( cmd == "w" )
+xCapt = x+dStep*cos(theta);
+yCapt = y+dStep*sin(theta);;
 thetaCapt = theta;
-elseif ( cmd == "d" ) %turn right
+
+elseif ( cmd == "d" )
 xCapt = x;
 yCapt = y;
-thetaCapt = theta;
-elseif ( cmd == "a" ) %turn left
+thetaCapt = theta+dTheta;
+
+elseif ( cmd == "a" )
 xCapt = x;
 yCapt = y;
-thetaCapt = theta ;
-else % if none of the cases are true, set the new variables equal to the old inputs.
+thetaCapt = theta - dTheta;
+
+else
 xCapt = x;
 yCapt = y;
 thetaCapt = theta;
