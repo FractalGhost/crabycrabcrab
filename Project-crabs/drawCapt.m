@@ -8,12 +8,12 @@ function captainGraphics = drawCapt (xCapt , yCapt , thetaCapt , sizeCapt)
 % Use your code from last week to get the captain matrix
 % for a captain of dimension sizeCapt. Notice that
 % sizeCapt is a parameter passed into drawCapt.
-capt = getCapt(sizeCapt);
+capt = getCapt(sizeCapt)
 % TODO : Rotate captain from zero heading to heading thetaCapt
 % TODO : Shift the captain from (0 , 0) to (xCapt , yCapt)
 % Extract the captain points from the captain matrix capt.
 % rotate captain
-R = getRotation(thetaCapt);
+R = getRotation(thetaCapt)
 captRotated = R*capt;
 % shift captain to new location
 T = getTranslation(xCapt,yCapt);
