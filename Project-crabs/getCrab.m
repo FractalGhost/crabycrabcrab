@@ -15,7 +15,7 @@ crabPt7 = [0; 1.5*size; 1];
 crabPt8 = [-size; 1.5*size; 1];
 crabPt9 = [0; -1.5*size; 1];
 crabPt10 = [-size; -1.5*size; 1];
-crab = [ crabPt1, crabPt2, crabPt3, crabPt4, crabPt5, crabPt6, crabPt7, crabPt8,
+crab = [ crabPt1, crabPt2, crabPt3, crabPt4, crabPt5, crabPt6, crabPt7, crabPt8, ...
 crabPt9, crabPt10];
 endfunction
 
