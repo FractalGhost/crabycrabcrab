@@ -10,7 +10,8 @@ xCapt = 1000;
 yCapt = 200;
 thetaCapt = -pi/2;
 sizeCapt = 50;
-
+healthCapt = 3;
+crabsSlane = 0;
 %initialize crab location, heading and size
 xCrab = 1000;
 yCrab = 1200;
@@ -22,6 +23,7 @@ xJelly = rand*mapWidth;
 yJelly = 0;
 thetaJelly = -pi/2;
 sizeJelly = 25;
+jellySting = 1;
 
 % Draw the captain and initialize graphics handles
 %*********************************************************
