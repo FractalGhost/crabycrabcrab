@@ -1,6 +1,6 @@
 %Commitment
 
-function crabs ()
+function crabs (level)
 % Crabs is a kids computer game where a fisherman, called the captain,
 % hunts for a very clever and powerful crab.
   % Draw the game map and initialize map dimensions.
@@ -27,7 +27,7 @@ sizeJelly = 25;
 %*********************************************************
 captainGraphics = drawCapt(xCapt , yCapt, thetaCapt, sizeCapt);
 crabGraphics = drawCrab(xCrab,yCrab,thetaCrab,sizeCrab);
-jellGraphics = drawJelly(xJelly,yJelly,thetaJelly,sizeJelly);
+jellyHandle = drawJelly(xJelly,yJelly,thetaJelly,sizeJelly);
 % Put your call to drawCapt() here ..... You must give drawCapt its
 % input and output arguments.
 %*******************************************************
@@ -43,15 +43,17 @@ break
 endif
 fflush(stdout);
 pause(.01)
-endwhile
-for i=1:length(jellyGraphics)
-delete(jellyGraphics(i));
+
+for i=1:length(jellyHandle)
+delete(jellyHandle(i));
 endfor
 % move jellyfish
 [xJelly,yJelly,thetaJelly] = moveJelly(level, xJelly, yJelly,thetaJelly, sizeJelly,
 mapHeight,mapWidth);
 % draw jellyfish
-jellyGraphics = drawJelly(xJelly,yJelly,thetaJelly,sizeJelly);
+jellyHandle = drawJelly(xJelly,yJelly,thetaJelly,sizeJelly);
+
+endwhile
 
 if( cmd == "w" || cmd == "a" || cmd == "d" ) %Captain has moved. Respond.
 

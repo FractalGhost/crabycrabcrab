@@ -1,11 +1,11 @@
-function [xjelly yjelly, thetajelly] = moveJelly (level, x, y, theta , size, height, width)
-dstep=20*level/10;
-yjelly = y + dstep;
-xjely = x;
-thetajelly = theta;
-if(yjelly > height - 10*size)
-yjelly = size;
-xjely = rand * width
+function [xJelly yJelly, thetaJelly] = moveJelly (level, x, y, theta , size, height, width)
+dstep=20+level;
+yJelly = y + dstep;
+xJelly = x;
+thetaJelly = theta;
+if(yJelly > height - 10*size)
+yJelly = size;
+xJelly = rand * width;
 endif
 
 
