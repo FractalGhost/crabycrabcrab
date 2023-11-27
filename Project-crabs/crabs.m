@@ -38,7 +38,6 @@ captainGraphics = drawCapt(xCapt , yCapt, thetaCapt, sizeCapt);
 for k=1:numCrabs
 crabGraphics(:,k) = drawCrab(xCrab(k),yCrab(k),thetaCrab(k),sizeCrab);
 endfor
-spearGraphics = drawSpear (xSpear, ySpear, thetaSpear, sizeSpear);
 jellyHandle = drawJelly(xJelly,yJelly,thetaJelly,sizeJelly);
 % Put your call to drawCapt() here ..... You must give drawCapt its
 % input and output arguments.
@@ -63,7 +62,7 @@ mapHeight,mapWidth);
 jellyHandle = drawJelly(xJelly,yJelly,thetaJelly,sizeJelly);
 
 
-if( cmd == "w" || cmd == "a" || cmd == "d" || cmd == "s") %Captain has moved. Respond.
+if( cmd == "w" || cmd == "a" || cmd == "d" || cmd == "s" || cmd = "t") %Captain has moved. Respond.
 
 % erase old captain
 for i=1:length( captainGraphics )
@@ -78,10 +77,24 @@ endfor
 
 endif
 
+for k=1:numCrabs
+if( !isCrabCaught(k) && getDist(xnet,ynet,xCrab(k),yCrab(k)) < 7*sizeCapt )
+% erase the old crab as already done in crabs
+for i=1:length(crabGraphics(:,k))
+delete(crabGraphics(i,k));
+endfor
+% compute the crab’s angle to the net with getTheta and the components suggested above
+theta = gettheta()
+% call moveCrab(). To move backwards use cmd =”k”
+[xCrab,yCrab,thetaCrab] = moveCrab(cmd = k)
+% draw the crab as already done in crabs
+crabGraphics(:,k) = drawCrab(xCrab(k),yCrab(k),thetaCrab(k),sizeCrab);
+endif
+endfor
 
 %removes crab
 %or k=1:numCrabs
-%if( !isCrabCaught(k) && getDist(xSpeartip,ySpeartip,xCrab(k),yCrab(k)) < 2*sizeCapt ) %crab is caught
+%if( !isCrabCaught(k) && getDist(xCapt,yCapt,xCrab(k),yCrab(k)) < 2*sizeCapt ) %crab is caught
 
 %crabsCaught = crabsCaught + 1;
 
