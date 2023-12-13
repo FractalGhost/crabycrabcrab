@@ -24,6 +24,9 @@ xCapt = x+dLeap*cos(theta);
 yCapt = y+dLeap*sin(theta);
 thetaCapt = theta;
 
+elseif (cmd == "m")
+
+
 else
 xCapt = x;
 yCapt = y;

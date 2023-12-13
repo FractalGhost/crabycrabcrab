@@ -12,6 +12,6 @@ spt1=spear(:,1);
 spt2=spear(:,2);
 spt3=spear(:,3);
 
-spearGraphics(1)=drawLine(spt1, spt2, "k");
-spearGraphics(2)=drawLine(spt2, spt3, "y");
+spearGraphics(1)=drawLine(spt1, spt2, "y");
+spearGraphics(2)=drawLine(spt2, spt3, "k");
 endfunction
